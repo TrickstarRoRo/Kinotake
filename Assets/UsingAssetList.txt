@@ -1,0 +1,8 @@
+・「AssetStore」フォルダを作成してください
+・以下のアセットをインポートし、「AssetStore」フォルダ内にフォルダごと移動してください
+（全て無料です　Unityアカウントでのサインインが必要になります）
+
+--------------------
+
+2D Jungle Side-Scrolling Platformer Pack
+https://assetstore.unity.com/packages/2d/environments/2d-jungle-side-scrolling-platformer-pack-78506
