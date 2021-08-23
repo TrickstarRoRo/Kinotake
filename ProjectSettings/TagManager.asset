@@ -7,7 +7,8 @@ TagManager:
   - Ground
   - ThrowObj_0
   - ThrowObj_1
-  - Yasai
+  - Yasai_0
+  - Yasai_1
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackGround
+    uniqueID: 2817738429
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

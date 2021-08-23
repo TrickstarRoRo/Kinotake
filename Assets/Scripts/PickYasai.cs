@@ -13,6 +13,7 @@ namespace Kinotake.Player
         [SerializeField] string[] targetObjName; //オブジェクトのタグ名
 
         string inputText_pick;
+        string targetText_pick;
         GameObject targetObj; //拾うオブジェクト
         int targetObjID; //拾うオブジェクトの種類
         bool isCanPick; //拾えるか
@@ -20,6 +21,7 @@ namespace Kinotake.Player
         void Start()
         {
             inputText_pick = "Pick_" + playerID;
+            targetText_pick = "Yasai_" + playerID;
         }
 
         void Update()
@@ -52,16 +54,17 @@ namespace Kinotake.Player
             if (LayerMask.LayerToName(collision.gameObject.layer) == "Yasai")
             {
                 //ヤサイの種類を検出
-                for (int i = 0; i <= targetObjName.Length; i++)
+                for (int i = 0; i < targetObjName.Length; i++)
                 {
+                    Debug.Log("Round_" + i);
                     if (collision.gameObject.tag == targetObjName[i])
                     {
                         targetObjID = i;
                         targetObj = collision.gameObject;
+                        isCanPick = true;
                         break;
                     }
                 }
-                isCanPick = true;
             }
         }
 

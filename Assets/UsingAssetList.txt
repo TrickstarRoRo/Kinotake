@@ -6,3 +6,6 @@
 
 2D Jungle Side-Scrolling Platformer Pack
 https://assetstore.unity.com/packages/2d/environments/2d-jungle-side-scrolling-platformer-pack-78506
+
+Foliage2D
+https://assetstore.unity.com/packages/2d/textures-materials/nature/foliage-2d-41759

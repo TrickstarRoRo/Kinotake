@@ -16,6 +16,7 @@ namespace Kinotake.Player
         [SerializeField] int jumpPower; //ジャンプ力
         [SerializeField] bool isGround; //着地フラグ
 
+        [SerializeField] Vector2 debug_groundCol;
         float moveValue; //移動方向
         string inputText_move;
         string inputText_jump;
@@ -41,24 +42,31 @@ namespace Kinotake.Player
                 //向きを変える
                 if (moveValue > 0)
                 {
-                    transform.rotation = Quaternion.Euler(1, 0, 0);
+                    transform.rotation = Quaternion.Euler(0, 1, 0);
                 }
                 else
                 {
-                    transform.rotation = Quaternion.Euler(-180, 0, 0);
+                    transform.rotation = Quaternion.Euler(0, -180, 0);
                 }
             }
             //ジャンプ
             if (isGround && Input.GetButton(inputText_jump))
             {
-                rigidbody.AddForce(transform.up * jumpPower);
+                rigidbody.velocity = Vector2.zero;
+                rigidbody.AddForce(Vector2.up * jumpPower);
             }
+            //ジャンプ重力補正
+            //if (rigidbody.velocity.y > 25)
+            //{
+            //    rigidbody.velocity = new Vector2(0, 25);
+            //}
         }
 
         //着地判定
         private void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Ground") { isGround = true; }
+            debug_groundCol = collision.relativeVelocity;
         }
 
         //着地判定

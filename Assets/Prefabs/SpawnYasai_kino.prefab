@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7221978380278670648}
   - component: {fileID: 8220154558126790171}
   m_Layer: 6
-  m_Name: SpawnYasai
-  m_TagString: Yasai
+  m_Name: SpawnYasai_kino
+  m_TagString: Yasai_0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 30c4d516e483c8f498e1f000ed1bfa02, type: 3}
-  m_Color: {r: 0.6850566, g: 1, b: 0.39999998, a: 1}
+  m_Color: {r: 1, g: 0.3150943, b: 0.32487887, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
